@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const app = express();
 const PORT = 3000;
@@ -49,4 +48,11 @@ app.get('/delete/:id', (req, res) => {
     res.redirect('/');
 });
 
-app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
+
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`サーバー起動中：http://localhost:${port}`);
+    });
+}
+
+module.exports = app;
