@@ -50,8 +50,8 @@ app.get('/delete/:id', (req, res) => {
 
 
 if (require.main === module) {
-    app.listen(port, () => {
-        console.log(`サーバー起動中：http://localhost:${port}`);
+    app.listen(PORT, () => {
+        console.log(`サーバー起動中：http://localhost:${PORT}`);
     });
 }
 
